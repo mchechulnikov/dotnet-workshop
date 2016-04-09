@@ -1,2 +1,1 @@
-# adsp
-Algorithms, data structures and patterns
+# Algorithms, data structures and patterns
