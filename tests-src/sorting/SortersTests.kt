@@ -3,10 +3,14 @@ package sorting.tests
 import sorting.InsertionSorter
 import org.junit.Assert
 import org.junit.Test
+import sorting.ShellSorter
 import sorting.Sorter
 
-class InsertionSorterTests {
-    private val sorters = listOf<Sorter>(InsertionSorter())
+class SortersTests {
+    private val sorters = listOf(
+        InsertionSorter(),
+        ShellSorter()
+    )
 
     @Test
     fun ascendingSort_simpleValidArray_isNotEmpty() {
@@ -53,5 +57,4 @@ class InsertionSorterTests {
     private fun forEach(action: (Sorter) -> Boolean) {
         for (sorter in sorters) action(sorter)
     }
-
 }
