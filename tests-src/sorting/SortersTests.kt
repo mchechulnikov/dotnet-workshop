@@ -3,13 +3,15 @@ package sorting.tests
 import sorting.InsertionSorter
 import org.junit.Assert
 import org.junit.Test
+import sorting.BubbleSorter
 import sorting.ShellSorter
 import sorting.Sorter
 
 class SortersTests {
     private val sorters = listOf(
         InsertionSorter(),
-        ShellSorter()
+        ShellSorter(),
+        BubbleSorter()
     )
 
     @Test
