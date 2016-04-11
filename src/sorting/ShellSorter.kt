@@ -25,7 +25,7 @@ class ShellSorter : Sorter {
                     j -= step
                 }
                 list[j + step] = selectedElement;
-                i.inc()
+                i += 1
             }
             step /= 2;
         }
