@@ -1,17 +1,16 @@
 package sorting.tests
 
-import sorting.InsertionSorter
+import com.sun.xml.internal.bind.v2.model.annotation.Quick
 import org.junit.Assert
 import org.junit.Test
-import sorting.BubbleSorter
-import sorting.ShellSorter
-import sorting.Sorter
+import sorting.*
 
 class SortersTests {
     private val sorters = listOf(
+        BubbleSorter(),
         InsertionSorter(),
         ShellSorter(),
-        BubbleSorter()
+        QuickSorter()
     )
 
     @Test
