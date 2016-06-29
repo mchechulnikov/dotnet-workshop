@@ -1,0 +1,5 @@
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\bin\Debug\Adsp.Multithreading.dll
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\bin\Debug\Adsp.Multithreading.pdb
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\obj\Debug\Adsp.Multithreading.csprojResolveAssemblyReference.cache
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\obj\Debug\Adsp.Multithreading.dll
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\obj\Debug\Adsp.Multithreading.pdb

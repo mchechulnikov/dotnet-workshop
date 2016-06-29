@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adsp.Multithreading", "Adsp.Multithreading\Adsp.Multithreading.csproj", "{1FBBC1D6-6810-4865-A86E-3662B141495C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adsp.Multithreading.Tests", "Adsp.Multithreading.Tests\Adsp.Multithreading.Tests.csproj", "{2C0CC6BF-1933-4515-A7CE-B5DCF3D89263}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FBBC1D6-6810-4865-A86E-3662B141495C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FBBC1D6-6810-4865-A86E-3662B141495C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FBBC1D6-6810-4865-A86E-3662B141495C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FBBC1D6-6810-4865-A86E-3662B141495C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0CC6BF-1933-4515-A7CE-B5DCF3D89263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0CC6BF-1933-4515-A7CE-B5DCF3D89263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0CC6BF-1933-4515-A7CE-B5DCF3D89263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0CC6BF-1933-4515-A7CE-B5DCF3D89263}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
