@@ -2,9 +2,12 @@
 {
     public class MyReaderWriterLock : IMyReaderWriterLock
     {
+        public int ReadLocksCount { get; private set; }
+
         public void HoldReadLock()
         {
-            throw new System.NotImplementedException();
+
+            ReadLocksCount++;
         }
 
         public void HoldWriteLock()
@@ -14,7 +17,7 @@
 
         public void ReleaseReadLock()
         {
-            throw new System.NotImplementedException();
+            ReadLocksCount--;
         }
 
         public void ReleaseWriteLock()
