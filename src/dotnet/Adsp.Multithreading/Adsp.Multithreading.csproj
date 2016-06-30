@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Locks\MyReaderWriterLock.cs" />
+    <Compile Include="Locks\MyReadersWriterLock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Locks\IMyReaderWriterLock.cs" />
+    <Compile Include="Locks\IMyReadersWriterLock.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
