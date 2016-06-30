@@ -12,7 +12,7 @@ namespace Adsp.Multithreading.Tests.Locks
         {
             var resource = new ProtectedResource();
             Task.Factory.StartNew(() => resource.Read());
-            Thread.Sleep(100);
+            Thread.Sleep(300);
             resource.Write(42);
 
             Assert.Equal(42, resource.Value);
@@ -23,7 +23,7 @@ namespace Adsp.Multithreading.Tests.Locks
         {
             var resource = new ProtectedResource();
             Task.Factory.StartNew(() => resource.Write(42));
-            Thread.Sleep(100);
+            Thread.Sleep(300);
             var result = resource.Read();
 
             Assert.Equal(42, result);
@@ -46,7 +46,7 @@ namespace Adsp.Multithreading.Tests.Locks
             _mylock.HoldReadLock();
             try
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(2000);
                 return Value;
             }
             finally
@@ -60,7 +60,7 @@ namespace Adsp.Multithreading.Tests.Locks
             _mylock.HoldWriteLock();
             try
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(2000);
                 Value = value;
             }
             finally
