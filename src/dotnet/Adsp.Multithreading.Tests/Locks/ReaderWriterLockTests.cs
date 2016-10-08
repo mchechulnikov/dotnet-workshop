@@ -13,7 +13,7 @@ namespace Adsp.Multithreading.Tests.Locks
             var resource = new ProtectedResource();
             Task.Factory.StartNew(() => resource.Read());
             Thread.Sleep(300);
-            resource.Write(42);
+            resource.Write(42); 
 
             Assert.Equal(42, resource.Value);
         }
