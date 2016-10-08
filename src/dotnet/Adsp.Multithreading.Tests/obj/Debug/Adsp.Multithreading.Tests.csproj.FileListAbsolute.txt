@@ -16,3 +16,9 @@ C:\sources\adsp\src\dotnet\Adsp.Multithreading.Tests\bin\Debug\xunit.execution.d
 C:\sources\adsp\src\dotnet\Adsp.Multithreading.Tests\obj\Debug\Adsp.Multithreading.Tests.csprojResolveAssemblyReference.cache
 C:\sources\adsp\src\dotnet\Adsp.Multithreading.Tests\obj\Debug\Adsp.Multithreading.Tests.dll
 C:\sources\adsp\src\dotnet\Adsp.Multithreading.Tests\obj\Debug\Adsp.Multithreading.Tests.pdb
+C:\sources\adsp\src\dotnet\Adsp.Multithreading.Tests\bin\Debug\mscorlib.dll
+C:\sources\adsp\src\dotnet\Adsp.Multithreading.Tests\bin\Debug\normidna.nlp
+C:\sources\adsp\src\dotnet\Adsp.Multithreading.Tests\bin\Debug\normnfc.nlp
+C:\sources\adsp\src\dotnet\Adsp.Multithreading.Tests\bin\Debug\normnfd.nlp
+C:\sources\adsp\src\dotnet\Adsp.Multithreading.Tests\bin\Debug\normnfkc.nlp
+C:\sources\adsp\src\dotnet\Adsp.Multithreading.Tests\bin\Debug\normnfkd.nlp

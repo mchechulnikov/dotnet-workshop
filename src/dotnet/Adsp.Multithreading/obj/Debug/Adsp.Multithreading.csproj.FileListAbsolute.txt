@@ -2,3 +2,10 @@ C:\sources\adsp\src\dotnet\Adsp.Multithreading\bin\Debug\Adsp.Multithreading.dll
 C:\sources\adsp\src\dotnet\Adsp.Multithreading\bin\Debug\Adsp.Multithreading.pdb
 C:\sources\adsp\src\dotnet\Adsp.Multithreading\obj\Debug\Adsp.Multithreading.dll
 C:\sources\adsp\src\dotnet\Adsp.Multithreading\obj\Debug\Adsp.Multithreading.pdb
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\bin\Debug\mscorlib.dll
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\bin\Debug\normidna.nlp
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\bin\Debug\normnfc.nlp
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\bin\Debug\normnfd.nlp
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\bin\Debug\normnfkc.nlp
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\bin\Debug\normnfkd.nlp
+C:\sources\adsp\src\dotnet\Adsp.Multithreading\obj\Debug\Adsp.Multithreading.csprojResolveAssemblyReference.cache
