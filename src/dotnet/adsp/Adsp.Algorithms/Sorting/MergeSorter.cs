@@ -31,8 +31,15 @@ namespace Adsp.Algorithms.Sorting
 
     private void Sort(Range range)
     {
-      if (range.Length < 2)
+      if (range.Length == 1)
       {
+        _target[range.Start] = _array[range.Start];
+        return;
+      }
+
+      if (range.Length == 2)
+      {
+        SortPair(range);
         return;
       }
 
@@ -43,6 +50,20 @@ namespace Adsp.Algorithms.Sorting
       Sort(secondHalf);
 
       MergeHalfs(firstHalf, secondHalf);
+    }
+
+    private void SortPair(Range range)
+    {
+      if (_array[range.Start] < _array[range.End])
+      {
+        _target[range.Start] = _array[range.Start];
+        _target[range.End] = _array[range.End];
+      }
+      else
+      {
+        _target[range.Start] = _array[range.End];
+        _target[range.End] = _array[range.Start];
+      }
     }
 
     private void MergeHalfs(Range firstHalf, Range secondHalf)
@@ -64,14 +85,14 @@ namespace Adsp.Algorithms.Sorting
           break;
         }
 
-        if (_array[firstIndex] < _array[secondIndex])
+        if (_target[firstIndex] < _target[secondIndex])
         {
-          _target[targetIndex] = _array[firstIndex];
+          _target[targetIndex] = _target[firstIndex];
           firstIndex++;
         }
         else
         {
-          _target[targetIndex] = _array[secondIndex];
+          _target[targetIndex] = _target[secondIndex];
           secondIndex++;
         }
 
@@ -81,9 +102,9 @@ namespace Adsp.Algorithms.Sorting
 
     private void FlushRest(uint targetIndex, uint startIndex, uint endIndex)
     {
-      for (var index = startIndex; index < endIndex; index++)
+      for (var index = startIndex; index <= endIndex; index++)
       {
-        _target[targetIndex] = _array[index];
+        _target[targetIndex] = _target[index];
         targetIndex++;
       }
     }
@@ -98,6 +119,7 @@ namespace Adsp.Algorithms.Sorting
 
       public Range(uint start, uint end)
       {
+        if (start > end) throw new Exception();
         Start = start;
         End = end;
         Length = End - Start + 1;
