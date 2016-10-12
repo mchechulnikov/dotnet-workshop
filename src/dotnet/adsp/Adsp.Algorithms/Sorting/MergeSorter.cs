@@ -8,103 +8,102 @@ namespace Adsp.Algorithms.Sorting
   public class MergeSorter
   {
     private readonly int[] _array;
-    private readonly int[] _target;
 
     private MergeSorter(int[] array)
     {
       _array = array;
-      _target = new int[array.Length];
     }
 
     public static int[] Sort(int[] array)
     {
       var sorter = new MergeSorter(array);
-      sorter.StartSorting();
-
-      return sorter._target;
+      return sorter.StartSorting();
     }
 
-    private void StartSorting()
+    private int[] StartSorting()
     {
-      Sort(new Range(0, (uint) _array.Length - 1));
+      return Sort(new Range(0, (uint) _array.Length - 1));
     }
 
-    private void Sort(Range range)
+    private int[] Sort(Range range)
     {
       if (range.Length == 1)
       {
-        _target[range.Start] = _array[range.Start];
-        return;
+        return new int[] { _array[range.Start] };
       }
 
       if (range.Length == 2)
       {
-        SortPair(range);
-        return;
+        return SortPair(range);
       }
 
-      var firstHalf = range.FirstHalf;
-      var secondHalf = range.SecondHalf;
+      var firstHalfRange = range.FirstHalf;
+      var secondHalfRange = range.SecondHalf;
 
-      Sort(firstHalf);
-      Sort(secondHalf);
+      var firstHalf = Sort(firstHalfRange);
+      var secondHalf = Sort(secondHalfRange);
 
-      MergeHalfs(firstHalf, secondHalf);
+      return MergeHalfs(firstHalf, secondHalf);
     }
 
-    private void SortPair(Range range)
+    private int[] SortPair(Range range)
     {
+      var result = new int[2];
       if (_array[range.Start] < _array[range.End])
       {
-        _target[range.Start] = _array[range.Start];
-        _target[range.End] = _array[range.End];
+        result[0] = _array[range.Start];
+        result[1] = _array[range.End];
       }
       else
       {
-        _target[range.Start] = _array[range.End];
-        _target[range.End] = _array[range.Start];
+        result[0] = _array[range.End];
+        result[1] = _array[range.Start];
       }
+      return result;
     }
 
-    private void MergeHalfs(Range firstHalf, Range secondHalf)
+    private int[] MergeHalfs(int[] firstHalf, int[] secondHalf)
     {
-      var firstIndex = firstHalf.Start;
-      var secondIndex = secondHalf.Start;
-      var targetIndex = firstIndex;
+      var result = new int[firstHalf.Length + secondHalf.Length];
+
+      uint firstIndex = 0;
+      uint secondIndex = 0;
+      uint targetIndex = firstIndex;
 
       while (true)
       {
-        if (firstIndex == firstHalf.End)
+        if (firstIndex == firstHalf.Length - 1)
         {
-          FlushRest(targetIndex, secondIndex, secondHalf.End);
+          FlushRest(secondHalf, result, targetIndex, secondIndex);
           break;
         }
-        if (secondIndex == secondHalf.End)
+        if (secondIndex ==  secondHalf.Length - 1)
         {
-          FlushRest(targetIndex, firstIndex, firstHalf.End);
+          FlushRest(firstHalf, result, targetIndex, firstIndex);
           break;
         }
 
-        if (_target[firstIndex] < _target[secondIndex])
+        if (firstHalf[firstIndex] < secondHalf[secondIndex])
         {
-          _target[targetIndex] = _target[firstIndex];
+          result[targetIndex] = firstHalf[firstIndex];
           firstIndex++;
         }
         else
         {
-          _target[targetIndex] = _target[secondIndex];
+          result[targetIndex] = secondHalf[secondIndex];
           secondIndex++;
         }
 
         targetIndex++;
       }
+      return result;
     }
 
-    private void FlushRest(uint targetIndex, uint startIndex, uint endIndex)
+    private void FlushRest(int[] source, int[] target, uint targetIndex, uint startIndex)
     {
-      for (var index = startIndex; index <= endIndex; index++)
+      for (var index = startIndex; index < source.Length; index++)
       {
-        _target[targetIndex] = _target[index];
+        target[targetIndex] = source[index];
         targetIndex++;
       }
     }
