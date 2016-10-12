@@ -72,12 +72,12 @@ namespace Adsp.Algorithms.Sorting
 
       while (true)
       {
-        if (firstIndex > firstHalf.Length - 1)
+        if (firstIndex == firstHalf.Length)
         {
           FlushRest(targetIndex, secondIndex, secondHalf, ref result);
           break;
         }
-        if (secondIndex > secondHalf.Length - 1)
+        if (secondIndex == secondHalf.Length)
         {
           FlushRest(targetIndex, firstIndex, firstHalf, ref result);
           break;
