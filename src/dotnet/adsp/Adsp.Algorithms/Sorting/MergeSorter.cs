@@ -72,14 +72,14 @@ namespace Adsp.Algorithms.Sorting
 
       while (true)
       {
-        if (firstIndex == firstHalf.Length - 1)
+        if (firstIndex > firstHalf.Length - 1)
         {
-          FlushRest(secondHalf, result, targetIndex, secondIndex);
+          FlushRest(targetIndex, secondIndex, secondHalf, ref result);
           break;
         }
-        if (secondIndex ==  secondHalf.Length - 1)
+        if (secondIndex > secondHalf.Length - 1)
         {
-          FlushRest(firstHalf, result, targetIndex, firstIndex);
+          FlushRest(targetIndex, firstIndex, firstHalf, ref result);
           break;
         }
 
@@ -99,7 +99,7 @@ namespace Adsp.Algorithms.Sorting
       return result;
     }
 
-    private void FlushRest(int[] source, int[] target, uint targetIndex, uint startIndex)
+    private void FlushRest(uint targetIndex, uint startIndex, int[] source, ref int[] target)
     {
       for (var index = startIndex; index < source.Length; index++)
       {
