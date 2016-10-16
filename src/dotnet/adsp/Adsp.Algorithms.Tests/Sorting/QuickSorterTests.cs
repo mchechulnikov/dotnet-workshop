@@ -1,11 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using Xunit;
 using Xunit.Abstractions;
 using Adsp.Algorithms.Sorting;
 
 namespace Adsp.Algorithms.Tests.Sorting
 {
-    public class MergeSorterTests
+    public class QuickSorterTests
     {
       private int[] Array { get; } = new [] { 42, 22, 46, 2, 33, 3, 7574 };
 
@@ -13,7 +13,7 @@ namespace Adsp.Algorithms.Tests.Sorting
       public void Sort_UnsortedArray_Valid()
       {
         var array = Array;
-        var sortedArray = MergeSorter.Sort(array);
+        var sortedArray = QuickSorter.Sort(array);
 
         Assert.Equal(2, sortedArray[0]);
         Assert.Equal(3, sortedArray[1]);
@@ -28,7 +28,7 @@ namespace Adsp.Algorithms.Tests.Sorting
       public void Sort_UnsortedArray_EqualLength()
       {
         var array = Array;
-        var sortedArray = MergeSorter.Sort(array);
+        var sortedArray = QuickSorter.Sort(array);
         Assert.Equal(array.Length, sortedArray.Length);
       }
     }
