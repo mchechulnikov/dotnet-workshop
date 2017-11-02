@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace Tasks
 {
     public class MaxDiff
@@ -21,7 +17,7 @@ namespace Tasks
                     var diff = max - a[i];
                     if (diff > maxDiff)
                     {
-                        maxDif = diff;
+                        maxDiff = diff;
                     }
                 }
             }
